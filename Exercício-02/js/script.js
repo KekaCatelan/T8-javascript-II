@@ -16,11 +16,28 @@
 
 const muitosGatos= document.querySelectorAll(".item__imagem")
 
+// muitosGatos.forEach(function(gato){
+//     gato.addEventListener('click' , function(evento) {
+//         if( evento.target.classList.contains('invisivel')){
+//             evento.target.classList.remove('invisivel')
+//         } else{
+//             evento.target.classList.add('invisivel')
+//         }
+       
+//    })
+// })
+
+
 muitosGatos.forEach(function(gato){
     gato.addEventListener('click' , function(evento) {
-        evento.target.classList.add('invisivel')
-        // gato.classList.add('minha-classe')
+        if(gato.classList.contains('invisivel')){
+            gato.classList.remove('invisivel')
+        } else{
+            gato.classList.add('invisivel')
+        }
+       
    })
 })
+
 
 
